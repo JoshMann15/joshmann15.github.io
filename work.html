@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="work.js"></script>
     <title>JoshMann15 - PROJECTS</title>
 </head>
 <body>
@@ -19,23 +21,59 @@
 
     <div id="gameContainer">
         
-            <div class="game-previews-container" onclick="">
+        <div class="game-previews-container">
             <div class="game-preview">
-              <img src="icons/placeholder icon.png" alt="Game 1 Preview">
+              <img src="icons/placeholder icon.png" alt="Coming Soon">
               <h3>Roblox Api Wrapper</h3>
             </div>
-        
-            <div class="game-preview" onclick="window.open('https://github.com/InterstellarNetwork/Interstellar', '_blank').focus();console.log(window.innerWidth, window.innerHeight)">
-              <img src="icons/interstellar.png" alt="Game 2 Preview">
+          
+            <div class="game-preview" onclick="window.open('https://github.com/InterstellarNetwork/Interstellar', '_blank').focus();">
+              <img src="icons/interstellar.png" alt="Interstellar Logo">
               <h3>Interstellar</h3>
             </div>
-
+          
             <div class="game-preview" onclick="window.open('https://github.com/Sanjin84/pylinux', '_blank').focus();">
-                <img src="icons/PyLinuxIco.png" alt="Game 2 Preview">
-                <h3>PyLinux</h3>
+              <img src="icons/PyLinuxIco.png" alt="Pylinux Logo">
+              <h3>PyLinux</h3>
+            </div>
+          
+            <div class="game-preview" onclick="window.open('https://www.roblox.com/communities/35028577/TALEGATES-INTERACTIVE#!/about', '_blank').focus();">
+              <img src="icons/seekerstale.png" alt="Seeker's Tale Logo">
+              <h3>Seeker's Tale (WIP)</h3>
+            </div>
+            <div class="game-preview" onclick="window.open('https://www.roblox.com/games/95706784314983/NEW-Cash-Cab', '_blank').focus();">
+                <img src="icons/CashCab.png" alt="Cash Cab Icon">
+                <h3>Cash Cab (WIP)</h3>
+              </div>
+          </div>
+          <div class='wrapper'>
+            <div class='bar'>
+              <div class='bar-info html' data-total='95'>
+                Python
+                <span class='percent'>95</span>
+              </div>
             </div>
         
-            <!-- Add more game previews as needed -->
+            <div class='bar'>
+              <div class='bar-info css' data-total='90'>
+                Lua
+                <span class='percent'>90</span>
+              </div>
+            </div>
+        
+            <div class='bar'>
+              <div class='bar-info js' data-total='50'>
+                C#
+                <span class='percent'>50</span>
+              </div>
+            </div>
+        
+            <div class='bar'>
+              <div class='bar-info ps' data-total='50'>
+                Javascript
+                <span class='percent'>50</span>
+              </div>
+            </div>
           </div>
 
     </div>
