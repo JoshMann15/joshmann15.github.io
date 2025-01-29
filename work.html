@@ -3,87 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="work.js"></script>
-    <title>JoshMann15 - PROJECTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Liter&family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="work.css">
+    <script src="index.js"></script>
+    <title>JoshMann15 - WORK</title>
 </head>
 <body>
-    
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
-
-    <span><a href="index.html">HOME</a></span>
-
-    <span id="title">PROJECTS</span>
-
-    <div id="gameContainer">
-        
-        <div class="game-previews-container">
-            <div class="game-preview">
-              <img src="icons/placeholder icon.png" alt="Coming Soon">
-              <h3>Roblox Api Wrapper</h3>
-            </div>
-          
-            <div class="game-preview" onclick="window.open('https://github.com/InterstellarNetwork/Interstellar', '_blank').focus();">
-              <img src="icons/interstellar.png" alt="Interstellar Logo">
-              <h3>Interstellar</h3>
-            </div>
-          
-            <div class="game-preview" onclick="window.open('https://github.com/Sanjin84/pylinux', '_blank').focus();">
-              <img src="icons/PyLinuxIco.png" alt="Pylinux Logo">
-              <h3>PyLinux</h3>
-            </div>
-          
-            <div class="game-preview" onclick="window.open('https://www.roblox.com/communities/35028577/TALEGATES-INTERACTIVE#!/about', '_blank').focus();">
-              <img src="icons/seekerstale.png" alt="Seeker's Tale Logo">
-              <h3>Seeker's Tale (WIP)</h3>
-            </div>
-            <div class="game-preview" onclick="window.open('https://www.roblox.com/games/95706784314983/NEW-Cash-Cab', '_blank').focus();">
-                <img src="icons/CashCab.png" alt="Cash Cab Icon">
-                <h3>Cash Cab (WIP)</h3>
-              </div>
-          </div>
-          <div class='wrapper'>
-            <div class='bar'>
-              <div class='bar-info html' data-total='95'>
-                Python
-                <span class='percent'>95</span>
-              </div>
-            </div>
-        
-            <div class='bar'>
-              <div class='bar-info css' data-total='90'>
-                Lua
-                <span class='percent'>90</span>
-              </div>
-            </div>
-        
-            <div class='bar'>
-              <div class='bar-info js' data-total='50'>
-                C#
-                <span class='percent'>50</span>
-              </div>
-            </div>
-        
-            <div class='bar'>
-              <div class='bar-info ps' data-total='50'>
-                Javascript
-                <span class='percent'>50</span>
-              </div>
-            </div>
-          </div>
-
+    <div class="home"><a href="/index.html">home.</a></div>
+    <div class="header">
+        <h1>Work.</h1>
     </div>
-    <div class="socials">
-        <a href="https://github.com/JoshMann15" target="_blank">
-            <img src="icons/github-mark-white.svg" width="25" height="25">
-        </a>
-        <a href="mailto:JoshMann15dev@gmail.com?subject=%5BSubject%5D%20Inquiry">
-            <img src="icons/email2-svg.svg" width="25" height="25">
-        </a>
+    <div class="languages">
+        <h2>Languages.</h2>
+        <ul>
+            <li class="language-item">
+                <span class="language-name">Python</span>
+                <span class="understanding-level">| Expert</span>
+            </li>
+            <li class="language-item">
+                <span class="language-name">Lua</span>
+                <span class="understanding-level">| Advanced</span>
+            </li>
+            <li class="language-item">
+                <span class="language-name">C#</span>
+                <span class="understanding-level">| Proficient</span>
+            </li>
+            <li class="language-item">
+                <span class="language-name">JavaScript</span>
+                <span class="understanding-level">| Proficient</span>
+            </li>
+        </ul>
+    </div>
+    <div class="projects-container">
+        <h2>Projects.</h2>
+        <div class="projects">
+            <div class="project-item" onclick="window.open('https://github.com/InterstellarNetwork/Interstellar', '_blank').focus();">
+                <div class="project-icon">
+                    <img src="/icons/interstellar.png" alt="Interstellar Icon">
+                </div>
+                <p class="project-name">Interstellar</p>
+            </div>
+            <div class="project-item" onclick="window.open('https://github.com/Sanjin84/pylinux', '_blank').focus();">
+                <div class="project-icon">
+                    <img src="/icons/PyLinuxIco.png" alt="PyLinux Icon">
+                </div>
+                <p class="project-name">PyLinux</p>
+            </div>
+            <div class="project-item" onclick="window.open('https://www.roblox.com/communities/35028577/TALEGATES-INTERACTIVE#!/about', '_blank').focus();">
+                <div class="project-icon">
+                    <img src="/icons/seekerstale.png" alt="Seeker's Tale Logo">
+                </div>
+                <p class="project-name">Seeker's Tale</p>
+            </div>
+            <div class="project-item" onclick="window.open('https://www.roblox.com/games/95706784314983/NEW-Cash-Cab', '_blank').focus();">
+                <div class="project-icon">
+                    <img src="/icons/CashCab.png" alt="Cash Cab Logo">
+                </div>
+                <p class="project-name">Cash Cab</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
