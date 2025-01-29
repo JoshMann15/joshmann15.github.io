@@ -1,0 +1,291 @@
+:root {
+    --text-color: #EAEAEA;
+    --hover-color: #f6f1d9;
+    --highlight-color: rgba(255, 215, 0, 0.5);
+    --background-color: #121212;
+    --greyed-out-color: #757575;
+}
+
+html, body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "MedievalSharp", serif;
+    color: var(--text-color);
+    z-index: 10;
+    padding: 1vw;
+}
+
+.home a {
+    font-family: "MedievalSharp", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    font-size: 1.8vw;
+    animation-delay: 0s, 2s;
+}
+
+.header {
+    display: flex;
+    padding-top: 2vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "MedievalSharp", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    font-size: 15vw;
+    animation-delay: 0s, 2s;
+}
+
+.languages h2 {
+    margin: 0;
+    font-family: "MedievalSharp", serif;
+    font-weight: 400;
+    font-size: 5.5vw;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1s, 3s;
+}
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.languages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.language-item {
+    font-family: "MedievalSharp", serif;
+    font-weight: 400;
+    font-size: 4vw;
+    color: var(--greyed-out-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1.5s, 3.5s;
+}
+
+.language-name {
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.understanding-level {
+    color: var(--hover-color);
+    opacity: 0;
+    margin-left: 5px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.header h1:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.languages h2:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.language-item:hover .language-name {
+    color: var(--text-color);
+}
+
+.language-item:hover .understanding-level {
+    opacity: 1;
+    transform: translateX(5px);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.language-item:hover {
+    transform: scale(1.05);
+}
+
+.projects-container {
+    text-align: center;
+    align-items: center;
+    margin-top: 6vh;
+}
+
+.projects-container h2{
+    margin: 0;
+    font-family: "MedievalSharp", serif;
+    font-weight: 400;
+    font-size: 5.5vw;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1s, 3s;
+}
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10vw;
+    width: 100%;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1.5s, 3.5s;
+    width: 200px;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+.project-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-name {
+    font-family: "MedievalSharp", serif;
+    font-weight: 400;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    width: 100%;
+    margin-top: 5px;
+    color: var(--greyed-out-color);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.home a:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.projects-container h2:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.project-item:hover .project-name {
+    color: var(--text-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 12vw;
+    }
+
+    .languages h2 {
+        font-size: 8vw;
+    }
+
+    .language-item {
+        font-size: 5vw;
+    }
+
+    .languages {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 14vw;
+    }
+
+    .languages h2 {
+        font-size: 10vw;
+    }
+
+    .language-item {
+        font-size: 6vw;
+    }
+
+    .languages {
+        gap: 10px;
+    }
+}
