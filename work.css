@@ -1,0 +1,269 @@
+:root {
+    --text-color: #EAEAEA;
+    --hover-color: #f6f1d9;
+    --highlight-color: rgba(255, 215, 0, 0.5);
+    --background-color: #121212;
+    --greyed-out-color: #757575;
+}
+
+html, body {
+    background-color: var(--background-color);
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "MedievalSharp", serif;
+    color: var(--text-color);
+    z-index: 10;
+    padding: 1vw;
+}
+
+.home a {
+    font-family: "MedievalSharp", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    font-size: 1.8vw;
+    animation-delay: 0s, 2s;
+}
+
+.header {
+    display: flex;
+    padding-top: 2vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "MedievalSharp", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    font-size: 15vw;
+    animation-delay: 0s, 2s;
+}
+
+.projects-container {
+    text-align: center;
+    align-items: center;
+    margin-top: 6vh;
+}
+
+.projects-container h2 {
+    margin: 0;
+    font-family: "MedievalSharp", serif;
+    font-weight: 400;
+    font-size: 5.5vw;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1s, 3s;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10vw;
+    width: 100%;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1.5s, 3.5s;
+    width: 200px;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+.project-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-name {
+    font-family: "MedievalSharp", serif;
+    font-weight: 400;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    width: 100%;
+    margin-top: 5px;
+    color: var(--greyed-out-color);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.home a:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.projects-container h2:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.project-item:hover .project-name {
+    color: var(--text-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 12vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 14vw;
+    }
+}
+
+.languages-scroll {
+    overflow: hidden;
+    position: relative;
+    width: 66vw; /* 66% of the window width */
+    height: 70px; /* Adjust height as needed */
+    background-color: var(--background-color);
+
+    margin: 0px auto; /* Center the container */
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1s;
+
+}
+
+.languages-banner h2 {
+    margin: 0;
+    font-family: "MedievalSharp", serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 5.5vw;
+    color: var(--text-color);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
+    animation-delay: 1s, 3s;
+}
+
+.languages-banner .padding {
+    padding: 20px;
+}
+
+.marquee {
+    display: flex;
+    width: 400%; /* Double the width to accommodate the duplicated content */
+    height: 100%;
+    animation: scroll 40s linear infinite; /* Adjust the duration as needed */
+}
+.marquee2 {
+    display: flex;
+    width: 400%; /* Double the width to accommodate the duplicated content */
+    height: 100%;
+    animation: scroll 30s linear infinite; /* Adjust the duration as needed */
+}
+
+.scroll{
+    display: flex;
+    width: 50%; /* Half width to fit the original content */
+    height: 100%;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: var(--text-color);
+
+    margin: 0 5px; /* Space between language items */
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.9);
+}
+
+.language-item:hover {
+    transform: scale(0.85);
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.languages-banner h2:hover {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
