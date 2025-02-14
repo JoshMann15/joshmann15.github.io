@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Liter&family=MedievalSharp&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/67d479e604.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="about.css">
     <script src="index.js"></script>
     <title>JoshMann15 - ABOUT</title>
@@ -13,13 +14,53 @@
 <body>
     <div class="home"><a href="/index.html">home.</a></div>
     <div class="content">
-        <img src="https://avatars.githubusercontent.com/JoshMann15" width="300" height="300">
-        <h2>JoshMann15</h2>
         <div class="aboutme">
-            <p>
-                I’m JoshMann15, a professional developer with expertise in Python, Lua, C#, and web development. I specialize in building efficient, scalable solutions, ranging from automation scripts to full-stack web applications. With a strong focus on writing clean, maintainable code, I ensure that my work not only meets but exceeds client expectations. I take pride in delivering high-quality, reliable results that are tailored to each project's unique requirements. Whether you're looking for custom software, website development, or automation tools, I am committed to providing solutions that drive value and performance. Let's work together to turn your ideas into reality.
-            </p>
+            <div class="profile-icon">
+                <img src="https://avatars.githubusercontent.com/JoshMann15" alt="JoshMann15">
+            </div>
+            <div class="about-details">
+                <h2>JoshMann15</h2>
+                <p class="tagline">Professional Developer & Tech Enthusiast</p>
+                <p class="about-info">
+                    I’m JoshMann15, a professional developer with expertise in Python, Lua, C#, and web development. I specialize in building efficient, scalable solutions, ranging from automation scripts to full-stack web applications. With a strong focus on writing clean, maintainable code, I ensure that my work not only meets but exceeds client expectations.
+                </p>
+                <p class="about-info">
+                    I take pride in delivering high-quality, reliable results that are tailored to each project's unique requirements. Whether you're looking for custom software, website development, or automation tools, I am committed to providing solutions that drive value and performance. Let's work together to turn your ideas into reality.
+                </p>
+            </div>
+        </div>
+        <div class="additional-sections">
+            <div class="section-item">
+                <h3>My Time</h3>
+                <div style="background-color: #3333333b; padding: 10px; border-radius: 5px;">
+                    <p id="current-time" style="font-size: 150%;"></p>
+                </div>
+            </div>
+            <div class="section-item">
+                <h3>Open to Commissions</h3>
+                <p>I am currently open to commissions. Feel free to reach out to discuss your project needs!</p>
+            </div>
+            <div class="section-item">
+                <h3>Contact</h3>
+                <a class="contacts" onclick="window.open('https://discordapp.com/users/805209975592189982', '_blank').focus();"><i class="fa-brands fa-discord" style="cursor: pointer;"></i></a><a class="contacts" onclick="window.open('https://github.com/JoshMann15', '_blank').focus();"><i class="fa-brands fa-github" style="cursor: pointer;"></i><a></a>
+            </div>
         </div>
     </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const offset = 11; // AEST + 1hr
+            const localTime = new Date(now.getTime() + offset * 60 * 60 * 1000);
+            let hours = localTime.getUTCHours();
+            const minutes = localTime.getUTCMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const strTime = `${hours.toString().padStart(2, '0')}:${minutes} ${ampm}`;
+            document.getElementById('current-time').textContent = strTime;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
 </body>
 </html>

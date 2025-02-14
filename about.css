@@ -1,8 +1,10 @@
 :root {
     --text-color: #EAEAEA;
+    --border-color: #ffffff9f;
     --hover-color: #f6f1d9;
     --hover-glow: rgba(255, 215, 0, 0.5);
     --background-color: #121212;
+    --highlight-color: #FFD700;
 }
 
 html, body {
@@ -21,6 +23,18 @@ html, body {
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+body {
+    font-family: 'Liter', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .home {
@@ -43,6 +57,7 @@ body::-webkit-scrollbar {
     animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
     font-size: 1.8vw;
     animation-delay: 0s, 2s;
+    transition: color 0.3s ease;
 }
 
 .home a:hover {
@@ -51,72 +66,206 @@ body::-webkit-scrollbar {
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 5vh;
-    padding-bottom: 100px;
-}
-
-.content .aboutme {
-    border: 5px solid rgba(255, 255, 255, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 20px;
-    text-align: center;
+    width: 100%;
     max-width: 1200px;
+    padding: 20px;
 }
 
-.content img {
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 15px 5px rgba(255, 252, 234, 0.161);
-}
-
-.content h2 {
-    margin: 0;
-    padding: 0;
-    font-family: "MedievalSharp", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--text-color);
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
-    pointer-events: none;
+    animation-delay: 1.5s, 3.5s;
+    width: 100%;
+    margin-top: 3vh;
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.content h2 {
-    font-size: 6vw;
-    animation-delay: 0s, 2s;
+.profile-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
-.content .aboutme p {
-    font-family: "MedievalSharp", serif;
-    font-size: clamp(1rem, 2vw);
-    color: var(--text-color);
-    line-height: 1.6;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-    animation-delay: 1s;
-    max-width: 90%;
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.about-me h2 {
+.about-details {
+    text-align: center;
+}
+
+h2 {
     font-family: "MedievalSharp", serif;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.5em;
     color: var(--text-color);
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-    animation-delay: 0.5s;
+    margin: 10px 0;
+    transition: text-shadow 0.3s ease;
 }
 
+.tagline {
+    font-family: "Liter", serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: var(--greyed-out-color);
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
 
+.about-info {
+    font-family: "Liter", serif;
+    font-weight: 300;
+    font-size: 1.1em;
+    color: var(--greyed-out-color);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.aboutme:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.aboutme:hover h2 {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.aboutme:hover .tagline {
+    color: var(--hover-color);
+}
+
+.aboutme:hover .about-info {
+    color: var(--text-color);
+}
+
+.additional-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.section-item {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    opacity: 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.section-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.section-item h3 {
+    font-family: "MedievalSharp", serif;
+    font-size: 150%;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.section-item p {
+    font-family: "Liter", serif;
+    font-size: 90%;
+    color: var(--greyed-out-color);
+    margin: 0;
+}
+
+.section-item .contacts {
+    color: white;
+    font-size: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.section-item a i {
+    cursor: pointer;
+}
+
+.section-item a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section-item:hover h3 {
+    color: var(--hover-color);
+    text-shadow: 0px 0px 10px var(--highlight-color);
+}
+
+.section-item a:hover {
+    color: var(--hover-color);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .aboutme {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .about-info {
+        font-size: 0.9em;
+    }
+
+    .section-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutme {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .tagline {
+        font-size: 0.9em;
+    }
+
+    .about-info {
+        font-size: 0.8em;
+    }
+
+    .section-item {
+        width: 100%;
+    }
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -128,12 +277,11 @@ body::-webkit-scrollbar {
     }
 }
 
-.content h2:hover {
-    color: var(--hover-color);
-    text-shadow: 0px 0px 10px var(--hover-glow);
-    transform: scale(1.1);
-}
-
-.content h2 {
-    animation-fill-mode: forwards;
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
 }
