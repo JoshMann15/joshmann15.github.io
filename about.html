@@ -14,9 +14,9 @@
     <title>JoshMann15 - About</title>
 </head>
 <body>
-    <div class="home"><a href="/index.html">home.</a></div>
+    <div class="home"><a href="/index.html" style="cursor: none;" class="hover">home.</a></div>
     <div class="content">
-        <div class="aboutme">
+        <div class="aboutme hover">
             <div class="profile-icon">
                 <img src="https://avatars.githubusercontent.com/JoshMann15" alt="JoshMann15">
             </div>
@@ -32,22 +32,36 @@
             </div>
         </div>
         <div class="additional-sections">
-            <div class="section-item">
+            <div class="section-item hover">
                 <h3>My Time</h3>
                 <div style="background-color: #3333333b; padding: 10px; border-radius: 5px;">
                     <p id="current-time" style="font-size: 150%;"></p>
                 </div>
             </div>
-            <div class="section-item">
+            <div class="section-item hover">
                 <h3>Open to Commissions</h3>
                 <p>I am currently open to commissions. Feel free to reach out to discuss your project needs!</p>
             </div>
             <div class="section-item">
                 <h3>Contact</h3>
-                <a class="contacts" onclick="window.open('https://discordapp.com/users/805209975592189982', '_blank').focus();"><i class="fa-brands fa-discord" style="cursor: pointer;"></i></a><a class="contacts" onclick="window.open('https://github.com/JoshMann15', '_blank').focus();"><i class="fa-brands fa-github" style="cursor: pointer;"></i><a></a>
+                <a class="contacts hover" onclick="window.open('https://discordapp.com/users/805209975592189982', '_blank').focus();"><i class="fa-brands fa-discord"></i></a><a class="contacts hover" onclick="window.open('https://github.com/JoshMann15', '_blank').focus();"><i class="fa-brands fa-github"></i><a></a>
             </div>
         </div>
     </div>
+    <!-- Cursor Handler -->
+    <div class="cursor">
+
+        <div class="cursor__ball cursor__ball--small">
+          <svg height="10" width="10">
+            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+          </svg>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="cursor.js"></script>
+    <link rel="stylesheet" href="cursor.css">
+    <!-- End Handler -->
     <script>
         function updateTime() {
             const now = new Date();
