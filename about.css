@@ -14,7 +14,7 @@ html, body {
     overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100vh;
 }
 
 *, *::before, *::after {
@@ -125,6 +125,14 @@ h2 {
     color: var(--greyed-out-color);
     margin: 5px 0;
     transition: color 0.3s ease;
+}
+
+.payment-methods img {
+    width: 4vw;     /* scales with viewport width */
+    height: auto;    /* keeps aspect ratio */
+    padding: 5px;
+    max-width: 70px; /* optional: cap size on large screens */
+    min-width: 55px;
 }
 
 .about-info {

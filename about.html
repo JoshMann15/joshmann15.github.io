@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Liter&family=MedievalSharp&display=swap" rel="stylesheet">
@@ -22,12 +22,12 @@
             </div>
             <div class="about-details">
                 <h2>JoshMann15</h2>
-                <p class="tagline">Professional Developer & Tech Enthusiast</p>
-                <p class="about-info">
-                    I’m JoshMann15, a professional developer with expertise in Python, Lua, C#, and web development. I specialize in building efficient, scalable solutions, ranging from automation scripts to full-stack web applications. With a strong focus on writing clean, maintainable code, I ensure that my work not only meets but exceeds client expectations.
+                <p class="tagline">Freelance Developer</p>
+                <p class="about-info" style="filter: blur(2px); margin-bottom: 1rem; margin-top:1rem;">
+                    I’m JoshMann15, a freelance developer with expertise in Bot Development, Automation, and Web Development. I specialize in building efficient, scalable solutions, ranging from automation scripts to full-stack web applications. With a strong focus on writing clean, maintainable code, I ensure that my work not only meets but exceeds client expectations.
                 </p>
                 <p class="about-info">
-                    I take pride in delivering high-quality, reliable results that are tailored to each project's unique requirements. Whether you're looking for custom software, website development, or automation tools, I am committed to providing solutions that drive value and performance. Let's work together to turn your ideas into reality.
+                    Contact me through discord to discuss your project and get a quote today
                 </p>
             </div>
         </div>
@@ -39,8 +39,14 @@
                 </div>
             </div>
             <div class="section-item hover">
-                <h3>Open to Commissions</h3>
-                <p>I am currently open to commissions. Feel free to reach out to discuss your project needs!</p>
+                <h3>Commission Open</h3>
+                <div class="payment-methods">
+                    
+                    <img src="icons/payment/btc.svg" alt="Bitcoin">
+                    <img src="icons/payment/paypal.svg" alt="PayPal">
+                    <img src="icons/payment/eth.svg" alt="Ethereum">
+                    <img src="icons/payment/ltc.svg" alt="Litecoin">
+                </div>
             </div>
             <div class="section-item">
                 <h3>Contact</h3>
@@ -65,7 +71,7 @@
     <script>
         function updateTime() {
             const now = new Date();
-            const offset = 11; // AEST + 1hr
+            const offset = 10; // AEST + 1hr
             const localTime = new Date(now.getTime() + offset * 60 * 60 * 1000);
             let hours = localTime.getUTCHours();
             const minutes = localTime.getUTCMinutes().toString().padStart(2, '0');

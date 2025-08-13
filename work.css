@@ -89,9 +89,12 @@ body::-webkit-scrollbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10vw;
+    gap: 60px;
     width: 100%;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .project-item {
@@ -101,18 +104,24 @@ body::-webkit-scrollbar {
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards, floatText 5s ease-in-out infinite alternate;
     animation-delay: 1.5s, 3.5s;
-    width: 200px;
+    width: 40%;
     margin-top: 3vh;
+    background-color: var(--background-color);
+    border: 1px solid var(--greyed-out-color);
+    border-radius: 15px;
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-icon {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .project-icon img {
@@ -121,17 +130,55 @@ body::-webkit-scrollbar {
     object-fit: cover;
 }
 
+.project-details {
+    text-align: center;
+    width: 100%;
+}
+
+.project-category {
+    font-family: "Liter", serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--hover-color);
+    background-color: rgba(246, 241, 217, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .project-name {
     font-family: "MedievalSharp", serif;
     font-weight: 400;
-    font-size: 25px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
-    width: 100%;
-    margin-top: 5px;
-    color: var(--greyed-out-color);
+    font-size: 22px;
+    color: var(--text-color);
+    margin: 10px 0;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-description {
+    font-family: "Liter", serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--greyed-out-color);
+    line-height: 1.5;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.project-footer {
+    font-family: "Liter", serif;
+    font-weight: 300;
+    font-size: 10px;
+    color: var(--greyed-out-color);
+    font-style: italic;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(246, 241, 217, 0.2);
+    transition: color 0.3s ease;
 }
 
 .home a:hover {
@@ -145,12 +192,27 @@ body::-webkit-scrollbar {
 }
 
 .project-item:hover .project-name {
-    color: var(--text-color);
+    color: var(--hover-color);
     text-shadow: 0px 0px 10px var(--highlight-color);
 }
 
+.project-item:hover .project-category {
+    background-color: rgba(246, 241, 217, 0.2);
+    color: var(--hover-color);
+}
+
+.project-item:hover .project-description {
+    color: var(--text-color);
+}
+
+.project-item:hover .project-footer {
+    color: var(--hover-color);
+}
+
 .project-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px var(--highlight-color);
+    border-color: var(--hover-color);
 }
 
 @keyframes fadeIn {
@@ -398,6 +460,22 @@ body::-webkit-scrollbar {
     .company-info {
         font-size: 14px;
     }
+
+    .project-item {
+        width: 280px;
+    }
+
+    .projects {
+        gap: 20px;
+    }
+
+    .project-name {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -415,5 +493,26 @@ body::-webkit-scrollbar {
 
     .company-info {
         font-size: 12px;
+    }
+
+    .project-item {
+        width: 260px;
+    }
+
+    .projects {
+        gap: 15px;
+    }
+
+    .project-name {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 12px;
+    }
+
+    .project-category {
+        font-size: 12px;
+        padding: 4px 10px;
     }
 }
